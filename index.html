@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        font-family: sans-serif;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 600px; /* Ограничение ширины для лучшей читаемости на больших экранах */
+      }
+      .result {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      .dice-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      .dice {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      button {
+        padding: 10px 20px;
+        background-color: #a64eff;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          max-width: 100%; /* На маленьких экранах контейнер занимает всю ширину */
+        }
+        .dice-container {
+          flex-direction: column; /* Переключаемся на колонку для маленьких экранов */
+        }
+        .dice {
+          margin-bottom: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="result">
+        <h1>Вы победили!</h1>
+      </div>
+      <div class="dice-container">
+        <div class="dice">
+          <h2>Игрок</h2>
+          <img src="cubiki/Property 1=Variant5.svg" alt="Кубик игрока" />
+        </div>
+        <div class="dice">
+          <h2>Компьютер</h2>
+          <img src="cubiki/Property 1=Variant5.svg" alt="Кубик компа" />
+        </div>
+      </div>
+      <div>
+        <button>Бросить еще раз!</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
